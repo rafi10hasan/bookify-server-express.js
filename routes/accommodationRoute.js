@@ -3,6 +3,6 @@ const { accommodationListController } = require('../controller/accommodationCont
 const { updateAccController } = require('../controller/accommodationController/updateAccommodationController');
 const router = express.Router();
 
-router.get('/',accommodationListController);
+router.get('',accommodationListController);
 router.patch('/:id',updateAccController)
 module.exports = router

@@ -5,6 +5,6 @@ const { contactController } = require('../controller/contactController/contactCo
 
 const router = express.Router();
 
-router.post("/", contactController);
+router.post("", contactController);
 
 module.exports = router

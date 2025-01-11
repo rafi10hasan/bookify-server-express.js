@@ -4,7 +4,7 @@ const { reviewListController } = require('../controller/reviewController/reviewL
 const router = express.Router();
 
 
-router.get('/',reviewListController)
+router.get('',reviewListController)
 router.post('/add',addReviewController);
 
 module.exports = router

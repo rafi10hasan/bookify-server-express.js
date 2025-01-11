@@ -4,6 +4,6 @@ const { amenityController } = require('../controller/amenityController/amenityCo
 const router = express.Router();
 
 
-router.get('/',amenityController);
+router.get('',amenityController);
 
 module.exports = router

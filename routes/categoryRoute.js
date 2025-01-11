@@ -9,7 +9,7 @@ const { subCategoryController } = require('../controller/categoryController/subC
 
 const router = express.Router()
 
-router.get('/',categoryController);
+router.get('',categoryController);
 router.get('/all',allCategoryController);
 router.get('/sub',subCategoryController)
 router.post('/add',createCategoryController);
