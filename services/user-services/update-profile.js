@@ -7,7 +7,6 @@ const { createError } = require('../../errors/create-error');
 
 async function updateProfile(userId,userData,file){
   // console.log(s3)
-  // console.log('file from updateprofile',file)
 
     const user = await User.findById(userId.id);
     if (!user) {
