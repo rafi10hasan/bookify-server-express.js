@@ -37,7 +37,6 @@ async function paymentVerifyController(req,res){
           { upsert: true, new: true } 
         );
 
-        console.log("booking---",booking)
 
         res.json({ success: true , message:"payment successful"});
       } else {

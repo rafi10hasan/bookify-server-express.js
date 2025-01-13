@@ -2,7 +2,7 @@ const User = require("../../models/user-model");
 const bcrypt = require("bcrypt");
 
 const createUser = async (user) => {
-  const { firstname, lastname, email, password } = user;
+  const { firstname, lastname, email, password , role} = user;
  
   try {
     const isExistUser = await User.findOne({ email: email });
@@ -15,7 +15,7 @@ const createUser = async (user) => {
         lastname,
         email,
         password: hashedPassword,
-        role: "user",
+        role: role || "user",
         image: "",
       };
       const newUserData = await User.create(newUser);

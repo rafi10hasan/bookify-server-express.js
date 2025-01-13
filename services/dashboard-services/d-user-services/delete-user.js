@@ -3,6 +3,7 @@ const { createError } = require("../../../errors/create-error");
 const User = require("../../../models/user-model");
 
 async function deleteUser(id){
+ 
     try {
         if(!mongoose.isValidObjectId(id)){
             throw createError('invalid object id',400)

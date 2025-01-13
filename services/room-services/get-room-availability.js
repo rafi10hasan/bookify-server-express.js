@@ -47,19 +47,4 @@ async function getRoomAvailabilty(data) {
 
 module.exports = { getRoomAvailabilty };
 
-/*
-{
-  checkinDate: '2024-11-06T18:00:00.000Z',
-  checkoutDate: '2024-11-08T18:00:00.000Z',
-  roomId: '67179579c18ba3060e3f0a31'
-}
 
-
-const utcDate = new Date('2025-01-06T18:00:00.000Z');
-const timezoneOffset = 6 * 60 * 60 * 1000; // UTC+6 in milliseconds
-const customDate = new Date(utcDate.getTime() + timezoneOffset);
-console.log(customDate.toISOString().split('T')[0]); // Get date in YYYY-MM-DD
-// Output: "2025-01-07"
-
-
-*/

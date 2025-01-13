@@ -1,6 +1,6 @@
 const {getUserTransaction} = require('../../services/payment-services/get-user-transaction')
 
-async function transactionController(req,res){
+async function transactionController(req,res,next){
     const {id} = req.params
   try {
      const userTransactions = await getUserTransaction(id);
@@ -11,7 +11,7 @@ async function transactionController(req,res){
         res.json({message:"transaction are not found"})
      }
   } catch (error) {
-    console.log(error)
+    next(error)
   }
 }
 

@@ -4,8 +4,7 @@ async function addRoomController(req,res,next){
     const data = req.body;
     const files = req.files
    console.log("files",files)
-    // console.log(files)
-    // console.log(data.title)
+   
    try {
        const result = await createRoom(data,files);
        if(result){

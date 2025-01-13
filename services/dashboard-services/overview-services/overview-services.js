@@ -22,8 +22,6 @@ async function overviewServices() {
       { $project: { totalRevenue: { $ifNull: ["$totalRevenue", 0] } } }, // Default to 0 if no bookings
     ]);
 
-    console.log(totalRevenue);
-
     const todayArrival = await Booking.countDocuments({
       checkin: {
         $gte: new Date(today.setHours(0, 0, 0, 0)), // Start of today

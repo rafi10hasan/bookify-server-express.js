@@ -7,7 +7,6 @@ async function profileController(req,res,next){
    const data = req.body;
    const file = req.file;
      const myfile = await s3Uploader(file);
-     console.log('myfile',myfile)
    try{
      const result = await updateProfile(id,data,myfile);
     //  console.log("result",result)

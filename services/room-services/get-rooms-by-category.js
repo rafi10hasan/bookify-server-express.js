@@ -22,21 +22,13 @@ async function getRoomsByCategoryId(id, queryParams) {
     const objectId = new mongoose.Types.ObjectId(id);
     const { page, limit, sort, view, grading, minPrice, maxPrice } = queryParams;
 
-    
+  
     const pages = parseInt(page) || 1; 
     const limitPerPage = parseInt(limit) || 5;
     const skip = (pages - 1) * limitPerPage;
     const views = view ? decodeURI(view).split("|") : [];
     const gradings = grading ? decodeURI(grading).split("|") : [];
     
-
-    if(isNaN(Number(pages)) || isNaN((Number(limitPerPage)))){
-      throw createError('page and limit must be number',400)
-    }
-
-    if (isNaN(Number(minPrice)) || isNaN(Number(maxPrice))) {
-      throw createError('minPrice and maxPrice must be number');
-  }
 
     const subCategories = await getSubCategories(objectId);
 

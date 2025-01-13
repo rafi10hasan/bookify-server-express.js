@@ -97,13 +97,12 @@ const deleteCategory = async (id) => {
     if(subCategory.length){
       subCategoryIds = subCategory.map((sub)=> sub._id)
     }
-    console.log("Ids",subCategoryIds)
+
     if(!subCategory.length){
       subCategoryIds = []
       subCategoryIds.push(id)
     }
 
-    console.log(subCategoryIds)
     const rooms = await Room.find({categoryId: { $in: subCategoryIds}}).lean();
     const roomIds = rooms.map(room => room._id);
     // console.log(roomIds)

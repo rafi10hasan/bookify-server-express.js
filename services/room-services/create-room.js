@@ -83,7 +83,6 @@ async function createRoom(data,files){
           }
     )
 
-    console.log(updatedOrCreatedRoom)
     return true;
  } catch (error) {
     throw new Error(error)
