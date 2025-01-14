@@ -34,17 +34,29 @@ Start the server
 ## Environment Variable
 
 `DB_URL` = db_url
+
 `FRONTEND_HOST` = frontend_host
+
 `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` = stripe_key
+
 `STRIPE_SECRET_KEY` = secret_key
+
 `PORT` = 5000
+
 `ACCESS_TOKEN_SECRET` = token_secret
+
 `RESEND_API_KEY` = resend_api_key
+
 `CLOUDFLARE_ACCESS_KEY` = cloudflare_access_key
+
 `CLOUDFLARE_SECRET_KEY` = secret_key
+
 `CLOUDFLARE_BUCKET_NAME` = bucket_name
+
 `CLOUDFLARE_ACCOUNT_ID` = account_id
+
 `CLOUDFLARE_REGION` = region
+
 `CLOUDFLARE_BUCKET_ID` = bucket_id
 
 Open [http://localhost:5000](http://localhost:5000) to check api endpoint.
