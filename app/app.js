@@ -40,7 +40,7 @@ app.use('/rooms',roomsRoute);
 app.use('/searchrooms',searchRoomRoute);
 app.use('/auth',authRoute);
 app.use('/rating',ratingRoute);
-app.use('/review',reviewRoute);
+app.use('/reviews',reviewRoute);
 app.use('/accommodations',accommodationRoute);
 app.use('/amenity',amenityRoute)
 app.use('/check',checkRoomRoute);
